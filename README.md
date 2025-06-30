@@ -42,13 +42,12 @@
 </div>
 
 ###
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/pacman-contribution-graph.svg">
-  <img src="https://media.giphy.com/media/TgmiJ4AZ3HSiIqpOj6/giphy.gif" width="300" alt="Pac-Man Animation" />
-
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mesanda456/mesanda456/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mesanda456/mesanda456/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/mesanda456/mesanda456/output/pacman-contribution-graph.svg">
 </picture>
+
 
 ###
 
