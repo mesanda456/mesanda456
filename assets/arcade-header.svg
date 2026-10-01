@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 70" width="100%" height="70">
+  <defs>
+    <linearGradient id="arcade-neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="50%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#00ff9d" />
+    </linearGradient>
+    <style>
+      @keyframes blink-coin {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.15; }
+      }
+      .coin-prompt { animation: blink-coin 1.2s infinite; }
+      .pixel-font { font-family: 'Courier New', monospace, 'DM Mono'; font-weight: bold; }
+    </style>
+  </defs>
+
+  <rect x="2" y="2" width="846" height="66" rx="8" fill="#05090e" stroke="#1f2937" stroke-width="1.5" />
+  
+  <!-- Arcade Left Speaker / Vents -->
+  <g fill="#00d4ff" opacity="0.3">
+    <circle cx="30" cy="25" r="3" />
+    <circle cx="45" cy="25" r="3" />
+    <circle cx="60" cy="25" r="3" />
+    <circle cx="30" cy="45" r="3" />
+    <circle cx="45" cy="45" r="3" />
+    <circle cx="60" cy="45" r="3" />
+  </g>
+
+  <!-- Arcade Marquee Title -->
+  <g transform="translate(425, 30)">
+    <text x="0" y="4" text-anchor="middle" class="pixel-font" font-size="14" fill="url(#arcade-neon)" letter-spacing="3">
+      🕹️ COMMIT-STREAK ARCADE // MESANDA.PACMAN.STAGE_01
+    </text>
+    <text x="0" y="22" text-anchor="middle" class="pixel-font coin-prompt" font-size="10.5" fill="#ffbe0b" letter-spacing="2">
+      ★ INSERT COIN TO SPRINT ★ LEVEL: UNSTOPPABLE ★ HIGH SCORE: 365+ COMMITS ★
+    </text>
+  </g>
+
+  <!-- Arcade Right Speaker / Vents -->
+  <g fill="#00ff9d" opacity="0.3">
+    <circle cx="790" cy="25" r="3" />
+    <circle cx="805" cy="25" r="3" />
+    <circle cx="820" cy="25" r="3" />
+    <circle cx="790" cy="45" r="3" />
+    <circle cx="805" cy="45" r="3" />
+    <circle cx="820" cy="45" r="3" />
+  </g>
+</svg>

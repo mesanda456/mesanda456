@@ -1,11 +1,17 @@
 <div align="center">
 
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- 🚀 CINEMATIC ANIMATED CYBER HERO BANNER                              -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
 <a href="https://mesanda456.github.io/mesanda-portfolio/">
   <img width="100%" src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/hero-banner.svg" alt="Mesanda Sethumika — Software Engineer" />
 </a>
 
 <br/><br/>
 
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- ⚡ QUICK ACTION MATRIX BADGES                                        -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live_Site-00d4ff?style=for-the-badge&logo=googlechrome&logoColor=black)](https://mesanda456.github.io/mesanda-portfolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Mesanda_Sethumika-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mesanda-sethumika-943344353)
 [![Email](https://img.shields.io/badge/Email-mesandasethumika@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mesandasethumika@gmail.com)
@@ -15,14 +21,18 @@
 
 <br/><br/>
 
-<!-- ANIMATED HUD TELEMETRY MATRIX -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- 📡 ANIMATED TELEMETRY HUD & LIVE FREQUENCY EQUALIZER                -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
 <img width="100%" src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/cyber-status.svg" alt="Cyber Status Telemetry HUD" />
 
 </div>
 
 <br/>
 
-<!-- ABOUT & ANIMATED DEV DESK -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- ⚡ DEVELOPER CORE & TERMINAL WHOAMI                                 -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
 <table>
 <tr>
 <td width="55%" valign="top">
@@ -55,6 +65,15 @@ up 24/7, daily commit streak alive, fueled by 100% Ceylon Tea ☕
 </td>
 </tr>
 </table>
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- ☕ CEYLON TEA TO CODE COMPILATION PROTOCOL                           -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div align="center">
+  <img width="100%" src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/tea-to-code.svg" alt="Ceylon Tea to Code Compilation Protocol" />
+</div>
 
 <br/>
 
@@ -208,7 +227,9 @@ GPIO 15 (D8) ──> Relay 4: Ambient Halo
 
 <br/>
 
-<!-- ANIMATED HARDWARE LAB SCHEMATIC -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- 🔌 ANIMATED HARDWARE LAB SCHEMATIC                                  -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
 <div align="center">
   <img width="100%" src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/vesak-schematic.svg" alt="ESP8266 Hardware Animated Schematic" />
 </div>
@@ -221,7 +242,13 @@ GPIO 15 (D8) ──> Relay 4: Ambient Halo
 
 <div align="center">
 
-### 🎮 Arcade Contribution Run
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- 🕹️ RETRO COMMIT ARCADE MARQUEE & PAC-MAN ANIMATION                  -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<img width="100%" src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/arcade-header.svg" alt="Retro Arcade Marquee" />
+
+<br/>
+
 <img src="https://raw.githubusercontent.com/mesanda456/mesanda456/output/pacman-contribution-graph-dark.svg" width="100%" alt="Mesanda's Pac-Man Contribution Graph" />
 
 <br/><br/>
@@ -321,6 +348,9 @@ $ ./deploy_friday.sh --env=production --skip-tests=false
 
 <br/>
 
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- 🌊 ANIMATED FLOWING FOOTER WAVE                                     -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
 <img width="100%" src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/footer-wave.svg" alt="Footer Cyber Wave" />
 
 </div>

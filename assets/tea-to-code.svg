@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 140" width="100%" height="140">
+  <defs>
+    <linearGradient id="tea-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffbe0b" />
+      <stop offset="50%" stop-color="#00d4ff" />
+      <stop offset="100%" stop-color="#00ff9d" />
+    </linearGradient>
+
+    <style>
+      @keyframes steam-rise {
+        0% { transform: translateY(0) scaleX(1); opacity: 0.8; }
+        50% { transform: translateY(-12px) scaleX(1.3); opacity: 0.4; }
+        100% { transform: translateY(-24px) scaleX(1.6); opacity: 0; }
+      }
+      @keyframes gear-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes arrow-flow {
+        to { stroke-dashoffset: -20; }
+      }
+      @keyframes pulse-block {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px #00d4ff); }
+        50% { transform: scale(1.02); filter: drop-shadow(0 0 10px #00ff9d); }
+      }
+
+      .steam-1 { animation: steam-rise 2.2s ease-out infinite; }
+      .steam-2 { animation: steam-rise 2.2s ease-out infinite 0.7s; }
+      .steam-3 { animation: steam-rise 2.2s ease-out infinite 1.4s; }
+      .gear-rot { transform-origin: 425px 70px; animation: gear-spin 8s linear infinite; }
+      .flow-dash { stroke-dasharray: 6, 4; animation: arrow-flow 1s linear infinite; }
+      .code-pulse { animation: pulse-block 3s ease-in-out infinite; }
+      .mono-txt { font-family: 'Courier New', monospace, 'DM Mono'; font-size: 11px; font-weight: bold; }
+      .sub-txt { font-family: 'Courier New', monospace, 'DM Mono'; font-size: 9.5px; fill: #6b7f8e; }
+    </style>
+  </defs>
+
+  <rect x="2" y="2" width="846" height="136" rx="8" fill="#04090e" stroke="#16222f" stroke-width="1.2" />
+
+  <!-- SECTION TITLE -->
+  <text x="24" y="24" class="mono-txt" font-size="10" fill="#00d4ff" letter-spacing="1.5">
+    ☕ CEYLON TEA TO CODE TRANSLATION MATRIX // COMPILATION PROTOCOL
+  </text>
+  <line x1="24" y1="30" x2="826" y2="30" stroke="#16222f" stroke-width="1" />
+
+  <!-- STEP 1: FUEL SOURCE (TEA) -->
+  <g transform="translate(60, 50)">
+    <rect x="0" y="0" width="130" height="70" rx="6" fill="#0c1824" stroke="#ffbe0b" stroke-width="1" />
+    <!-- Teacup Icon & Steam -->
+    <path d="M 35 15 C 33 5, 37 -5, 35 -12" fill="none" stroke="#ffbe0b" stroke-width="2" class="steam-1" opacity="0.6" />
+    <path d="M 45 15 C 43 5, 47 -5, 45 -12" fill="none" stroke="#ffbe0b" stroke-width="2" class="steam-2" opacity="0.6" />
+    <path d="M 55 15 C 53 5, 57 -5, 55 -12" fill="none" stroke="#ffbe0b" stroke-width="2" class="steam-3" opacity="0.6" />
+    <text x="65" y="32" text-anchor="middle" font-size="22">☕</text>
+    <text x="65" y="48" text-anchor="middle" class="mono-txt" font-size="10" fill="#ffbe0b">Ceylon BOPF Tea</text>
+    <text x="65" y="60" text-anchor="middle" class="sub-txt">100% Natural Fuel</text>
+  </g>
+
+  <!-- Flow 1 -->
+  <line x1="195" y1="85" x2="345" y2="85" stroke="#00d4ff" stroke-width="2" class="flow-dash" />
+
+  <!-- STEP 2: ENGINE -->
+  <g transform="translate(350, 48)">
+    <rect x="0" y="0" width="150" height="74" rx="6" fill="#0c1824" stroke="#00d4ff" stroke-width="1.2" class="code-pulse" />
+    <text x="75" y="26" text-anchor="middle" class="mono-txt" font-size="11" fill="#00d4ff">MESANDA CORE</text>
+    <text x="75" y="42" text-anchor="middle" class="sub-txt">Problem Solver</text>
+    <text x="75" y="56" text-anchor="middle" class="sub-txt">System Architect</text>
+    <text x="75" y="68" text-anchor="middle" class="mono-txt" font-size="9" fill="#00ff9d">Discipline &gt; Motive</text>
+  </g>
+
+  <!-- Flow 2 -->
+  <line x1="505" y1="85" x2="655" y2="85" stroke="#00ff9d" stroke-width="2" class="flow-dash" />
+
+  <!-- STEP 3: ARTIFACTS / SHIPPED CODE -->
+  <g transform="translate(660, 42)">
+    <rect x="0" y="0" width="145" height="85" rx="6" fill="#0c1824" stroke="#00ff9d" stroke-width="1" />
+    <text x="72" y="20" text-anchor="middle" class="mono-txt" font-size="10.5" fill="#00ff9d">🚀 SHIPPED WORK</text>
+    <text x="14" y="38" class="mono-txt" font-size="9.5" fill="#e8edf2">▸ Spring Boot 3</text>
+    <text x="14" y="52" class="mono-txt" font-size="9.5" fill="#e8edf2">▸ MERN Platforms</text>
+    <text x="14" y="66" class="mono-txt" font-size="9.5" fill="#e8edf2">▸ ESP8266 IoT Web</text>
+    <text x="14" y="79" class="mono-txt" font-size="9.5" fill="#e8edf2">▸ Daily GitHub Streak</text>
+  </g>
+</svg>

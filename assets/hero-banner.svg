@@ -1,215 +1,288 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 280" width="100%" height="280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 320" width="100%" height="320">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#020608" />
-      <stop offset="40%" stop-color="#07121b" />
-      <stop offset="70%" stop-color="#041824" />
-      <stop offset="100%" stop-color="#020608" />
+    <linearGradient id="cyber-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#010408" />
+      <stop offset="35%" stop-color="#050e18" />
+      <stop offset="70%" stop-color="#081827" />
+      <stop offset="100%" stop-color="#010408" />
     </linearGradient>
 
-    <!-- Title Gradient -->
-    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Neon Cyan & Mint Gradients -->
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="30%" stop-color="#ffffff" />
-      <stop offset="65%" stop-color="#00d4ff" />
-      <stop offset="100%" stop-color="#00ff9d" />
+      <stop offset="30%" stop-color="#00d4ff" />
+      <stop offset="70%" stop-color="#00ff9d" />
+      <stop offset="100%" stop-color="#ffffff" />
+      <animate attributeName="x1" values="0%;100%;0%" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;200%;100%" dur="10s" repeatCount="indefinite" />
     </linearGradient>
 
-    <!-- Wave Gradient -->
-    <linearGradient id="wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Wave Multi-Gradient -->
+    <linearGradient id="fluid-wave" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00d4ff">
-        <animate attributeName="stop-color" values="#00d4ff;#7b5ea7;#00ff9d;#00d4ff" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#00d4ff;#7b5ea7;#00ff9d;#00d4ff" dur="7s" repeatCount="indefinite" />
       </stop>
       <stop offset="50%" stop-color="#7b5ea7">
-        <animate attributeName="stop-color" values="#7b5ea7;#00ff9d;#00d4ff;#7b5ea7" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#7b5ea7;#00ff9d;#00d4ff;#7b5ea7" dur="7s" repeatCount="indefinite" />
       </stop>
       <stop offset="100%" stop-color="#00ff9d">
-        <animate attributeName="stop-color" values="#00ff9d;#00d4ff;#7b5ea7;#00ff9d" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="stop-color" values="#00ff9d;#00d4ff;#7b5ea7;#00ff9d" dur="7s" repeatCount="indefinite" />
       </stop>
     </linearGradient>
 
-    <!-- Cyan Glow Filter -->
-    <filter id="cyan-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
+    <!-- Holographic Filters -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
 
-    <!-- Subtle Grid Pattern -->
-    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00d4ff" stroke-width="0.75" stroke-opacity="0.06" />
+    <!-- Sci-Fi Grid Pattern -->
+    <pattern id="sci-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.08" />
+      <circle cx="0" cy="0" r="1" fill="#00d4ff" opacity="0.3" />
     </pattern>
 
     <style>
-      @keyframes pulse-glow {
-        0%, 100% { opacity: 0.18; transform: scale(1); }
-        50% { opacity: 0.35; transform: scale(1.12); }
+      @keyframes pulse-ring {
+        0% { transform: scale(0.7); opacity: 0.9; }
+        100% { transform: scale(1.8); opacity: 0; }
       }
-      @keyframes blink {
-        0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #00ff9d); }
-        50% { opacity: 0.25; filter: none; }
+      @keyframes radar-sweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
       }
-      @keyframes float-node-1 {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-7px); }
+      @keyframes circuit-dash {
+        to { stroke-dashoffset: -50; }
       }
-      @keyframes float-node-2 {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(7px); }
+      @keyframes blink-live {
+        0%, 100% { opacity: 1; filter: drop-shadow(0 0 8px #00ff9d); }
+        50% { opacity: 0.2; filter: none; }
       }
-      @keyframes cursor-blink {
+      @keyframes float-badge-1 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(-1deg); }
+      }
+      @keyframes float-badge-2 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(8px) rotate(1deg); }
+      }
+      @keyframes eq-dance-1 { 0%, 100% { height: 10px; y: 45px; } 50% { height: 35px; y: 20px; } }
+      @keyframes eq-dance-2 { 0%, 100% { height: 32px; y: 23px; } 50% { height: 14px; y: 41px; } }
+      @keyframes eq-dance-3 { 0%, 100% { height: 20px; y: 35px; } 50% { height: 42px; y: 13px; } }
+      @keyframes eq-dance-4 { 0%, 100% { height: 38px; y: 17px; } 50% { height: 16px; y: 39px; } }
+      @keyframes cycle-cmd-1 {
+        0%, 28% { opacity: 1; transform: translateY(0); }
+        33%, 95% { opacity: 0; transform: translateY(-8px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes cycle-cmd-2 {
+        0%, 28% { opacity: 0; transform: translateY(8px); }
+        33%, 61% { opacity: 1; transform: translateY(0); }
+        66%, 100% { opacity: 0; transform: translateY(-8px); }
+      }
+      @keyframes cycle-cmd-3 {
+        0%, 61% { opacity: 0; transform: translateY(8px); }
+        66%, 95% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(8px); }
+      }
+      @keyframes cursor-flash {
         0%, 49% { opacity: 1; }
         50%, 100% { opacity: 0; }
       }
-      @keyframes cycle-text-1 {
-        0%, 28% { opacity: 1; transform: translateY(0px); }
-        33%, 95% { opacity: 0; transform: translateY(-10px); }
-        100% { opacity: 1; transform: translateY(0px); }
-      }
-      @keyframes cycle-text-2 {
-        0%, 28% { opacity: 0; transform: translateY(10px); }
-        33%, 61% { opacity: 1; transform: translateY(0px); }
-        66%, 100% { opacity: 0; transform: translateY(-10px); }
-      }
-      @keyframes cycle-text-3 {
-        0%, 61% { opacity: 0; transform: translateY(10px); }
-        66%, 95% { opacity: 1; transform: translateY(0px); }
-        100% { opacity: 0; transform: translateY(10px); }
-      }
-      @keyframes wave-shift {
+      @keyframes wave-morph {
         0% { transform: translateX(0); }
-        50% { transform: translateX(-35px); }
+        50% { transform: translateX(-40px); }
         100% { transform: translateX(0); }
       }
 
-      .glow-orb {
-        transform-origin: 475px 120px;
-        animation: pulse-glow 5s ease-in-out infinite;
+      .radar-wave {
+        transform-origin: 75px 55px;
+        animation: pulse-ring 2.8s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
       }
-      .live-dot { animation: blink 1.6s ease-in-out infinite; }
-      .float-1 { animation: float-node-1 3.5s ease-in-out infinite; }
-      .float-2 { animation: float-node-2 4s ease-in-out infinite 0.5s; }
-      .float-3 { animation: float-node-1 4.5s ease-in-out infinite 1s; }
-      .cursor { animation: cursor-blink 0.9s infinite; }
-      .txt-1 { animation: cycle-text-1 9s infinite; }
-      .txt-2 { animation: cycle-text-2 9s infinite; }
-      .txt-3 { animation: cycle-text-3 9s infinite; }
-      .wave-anim { animation: wave-shift 6s ease-in-out infinite; }
+      .radar-needle {
+        transform-origin: 75px 55px;
+        animation: radar-sweep 4s linear infinite;
+      }
+      .circuit-flow {
+        stroke-dasharray: 8, 5;
+        animation: circuit-dash 2s linear infinite;
+      }
+      .live-beacon { animation: blink-live 1.5s infinite; }
+      .badge-f1 { animation: float-badge-1 4s ease-in-out infinite; }
+      .badge-f2 { animation: float-badge-2 4.5s ease-in-out infinite 0.4s; }
+      .badge-f3 { animation: float-badge-1 5s ease-in-out infinite 0.8s; }
+      .eq-1 { animation: eq-dance-1 1s ease-in-out infinite; }
+      .eq-2 { animation: eq-dance-2 1.2s ease-in-out infinite 0.2s; }
+      .eq-3 { animation: eq-dance-3 0.9s ease-in-out infinite 0.4s; }
+      .eq-4 { animation: eq-dance-4 1.1s ease-in-out infinite 0.1s; }
+      .cmd-1 { animation: cycle-cmd-1 9s infinite; }
+      .cmd-2 { animation: cycle-cmd-2 9s infinite; }
+      .cmd-3 { animation: cycle-cmd-3 9s infinite; }
+      .cursor-bar { animation: cursor-flash 0.8s infinite; }
+      .wave-motion { animation: wave-morph 7s ease-in-out infinite; }
 
-      .font-display {
-        font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      }
-      .font-mono {
-        font-family: 'DM Mono', 'Fira Code', 'Courier New', monospace;
-      }
+      .mono { font-family: 'DM Mono', 'Fira Code', 'Courier New', monospace; }
+      .syne { font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
     </style>
   </defs>
 
-  <!-- Main Background Container -->
-  <rect x="0" y="0" width="950" height="280" fill="url(#bg-grad)" rx="12" />
+  <!-- Canvas Backdrop -->
+  <rect x="0" y="0" width="950" height="320" rx="14" fill="url(#cyber-bg)" />
+  <rect x="0" y="0" width="950" height="280" fill="url(#sci-grid)" opacity="0.8" />
 
-  <!-- Cyber Grid Pattern Overlay -->
-  <rect x="0" y="0" width="950" height="250" fill="url(#grid-pattern)" />
+  <!-- Ambient Holographic Glow Orbs -->
+  <circle cx="475" cy="130" r="180" fill="#00d4ff" opacity="0.08" filter="url(#soft-glow)" />
+  <circle cx="850" cy="80" r="100" fill="#00ff9d" opacity="0.06" filter="url(#soft-glow)" />
+  <circle cx="100" cy="180" r="120" fill="#7b5ea7" opacity="0.08" filter="url(#soft-glow)" />
 
-  <!-- Central Radial Glow Orb -->
-  <circle cx="475" cy="120" r="160" fill="url(#wave-grad)" opacity="0.12" filter="url(#cyan-glow)" class="glow-orb" />
-
-  <!-- Sci-Fi HUD Corner Brackets -->
-  <g stroke="#00d4ff" stroke-width="1.5" fill="none" opacity="0.4">
-    <!-- Top-Left -->
-    <path d="M 20 40 L 20 20 L 40 20" />
-    <circle cx="20" cy="20" r="2" fill="#00d4ff" />
-    <!-- Top-Right -->
-    <path d="M 930 40 L 930 20 L 910 20" />
-    <circle cx="930" cy="20" r="2" fill="#00d4ff" />
-    <!-- Bottom-Left -->
-    <path d="M 20 215 L 20 235 L 40 235" />
-    <!-- Bottom-Right -->
-    <path d="M 930 215 L 930 235 L 910 235" />
+  <!-- Sci-Fi HUD Top Bar -->
+  <g transform="translate(25, 20)">
+    <text x="0" y="10" class="mono" font-size="9" fill="#00d4ff" letter-spacing="1.5" font-weight="bold">
+      ◈ MESANDA-OS // CORE-ID: 0x7E4 // PANADURA-STATION (UTC+05:30)
+    </text>
+    <line x1="0" y1="16" x2="900" y2="16" stroke="#00d4ff" stroke-opacity="0.15" stroke-width="1" />
   </g>
 
-  <!-- Floating Tech Badges (Left Side) -->
-  <g class="float-1">
-    <rect x="42" y="85" width="88" height="26" rx="13" fill="#081520" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.5" />
-    <text x="86" y="102" text-anchor="middle" class="font-mono" font-size="10.5" font-weight="600" fill="#00d4ff">☕ Java EE</text>
-  </g>
-  <g class="float-2">
-    <rect x="30" y="130" width="105" height="26" rx="13" fill="#081520" stroke="#00ff9d" stroke-width="0.8" stroke-opacity="0.5" />
-    <text x="82" y="147" text-anchor="middle" class="font-mono" font-size="10.5" font-weight="600" fill="#00ff9d">🌿 Spring Boot</text>
-  </g>
-  <g class="float-3">
-    <rect x="52" y="175" width="80" height="26" rx="13" fill="#081520" stroke="#61dafb" stroke-width="0.8" stroke-opacity="0.5" />
-    <text x="92" y="192" text-anchor="middle" class="font-mono" font-size="10.5" font-weight="600" fill="#61dafb">⚛️ React</text>
+  <!-- Left: Animated Holographic Radar -->
+  <g transform="translate(15, 20)">
+    <circle cx="75" cy="55" r="28" fill="none" stroke="#00d4ff" stroke-width="0.8" opacity="0.3" />
+    <circle cx="75" cy="55" r="18" fill="none" stroke="#00d4ff" stroke-width="0.8" opacity="0.5" />
+    <circle cx="75" cy="55" r="12" fill="none" stroke="#00ff9d" stroke-width="1" class="radar-wave" />
+    <!-- Radar Sweep Line -->
+    <line x1="75" y1="55" x2="75" y2="28" stroke="#00ff9d" stroke-width="1.5" class="radar-needle" filter="url(#neon-glow)" />
+    <circle cx="75" cy="55" r="3" fill="#00ff9d" class="live-beacon" />
+    <text x="75" y="94" text-anchor="middle" class="mono" font-size="7.5" fill="#6b7f8e" letter-spacing="1">RADAR: ACTIVE</text>
   </g>
 
-  <!-- Floating Tech Badges (Right Side) -->
-  <g class="float-2">
-    <rect x="815" y="85" width="95" height="26" rx="13" fill="#081520" stroke="#ff4d6d" stroke-width="0.8" stroke-opacity="0.5" />
-    <text x="862" y="102" text-anchor="middle" class="font-mono" font-size="10.5" font-weight="600" fill="#ff4d6d">🤖 ESP8266</text>
-  </g>
-  <g class="float-1">
-    <rect x="805" y="130" width="112" height="26" rx="13" fill="#081520" stroke="#02569b" stroke-width="0.8" stroke-opacity="0.5" />
-    <text x="861" y="147" text-anchor="middle" class="font-mono" font-size="10.5" font-weight="600" fill="#38bdf8">📱 Flutter/Dart</text>
-  </g>
-  <g class="float-3">
-    <rect x="820" y="175" width="85" height="26" rx="13" fill="#081520" stroke="#2496ed" stroke-width="0.8" stroke-opacity="0.5" />
-    <text x="862" y="192" text-anchor="middle" class="font-mono" font-size="10.5" font-weight="600" fill="#2496ed">🐳 Docker</text>
+  <!-- Right: Dynamic Audio Frequency Equalizer -->
+  <g transform="translate(850, 30)">
+    <rect class="eq-1" x="0"  y="35" width="4" height="20" rx="2" fill="url(#fluid-wave)" />
+    <rect class="eq-2" x="8"  y="23" width="4" height="32" rx="2" fill="url(#fluid-wave)" />
+    <rect class="eq-3" x="16" y="30" width="4" height="25" rx="2" fill="url(#fluid-wave)" />
+    <rect class="eq-4" x="24" y="17" width="4" height="38" rx="2" fill="url(#fluid-wave)" />
+    <rect class="eq-2" x="32" y="27" width="4" height="28" rx="2" fill="url(#fluid-wave)" />
+    <rect class="eq-1" x="40" y="38" width="4" height="17" rx="2" fill="url(#fluid-wave)" />
+    <rect class="eq-3" x="48" y="21" width="4" height="34" rx="2" fill="url(#fluid-wave)" />
+    <text x="26" y="65" text-anchor="middle" class="mono" font-size="7.5" fill="#00d4ff" letter-spacing="1">LIVE TELEMETRY</text>
   </g>
 
-  <!-- Top Center: Live Availability Pill -->
-  <g transform="translate(475, 42)">
-    <rect x="-170" y="-14" width="340" height="28" rx="14" fill="#071822" stroke="#00d4ff" stroke-width="1" stroke-opacity="0.5" />
-    <circle cx="-145" cy="0" r="4.5" fill="#00ff9d" class="live-dot" />
-    <text x="10" y="4" text-anchor="middle" class="font-mono" font-size="10" font-weight="600" fill="#00ff9d" letter-spacing="1">
-      OPEN FOR INTERNSHIPS &amp; JUNIOR ROLES
+  <!-- Animated Circuit Bus Lines (Data flows across canvas) -->
+  <g fill="none" stroke-width="1">
+    <path d="M 125 75 L 220 75 L 260 110" stroke="#00d4ff" stroke-opacity="0.3" class="circuit-flow" />
+    <path d="M 825 75 L 730 75 L 690 110" stroke="#00ff9d" stroke-opacity="0.3" class="circuit-flow" />
+    <path d="M 40 180 L 160 180 L 210 215" stroke="#7b5ea7" stroke-opacity="0.3" class="circuit-flow" />
+    <path d="M 910 180 L 790 180 L 740 215" stroke="#00d4ff" stroke-opacity="0.3" class="circuit-flow" />
+  </g>
+
+  <!-- Sci-Fi Corner Brackets -->
+  <g stroke="#00d4ff" stroke-width="1.5" fill="none" opacity="0.5">
+    <path d="M 18 35 L 18 18 L 35 18" />
+    <path d="M 932 35 L 932 18 L 915 18" />
+    <path d="M 18 260 L 18 277 L 35 277" />
+    <path d="M 932 260 L 932 277 L 915 277" />
+  </g>
+
+  <!-- Floating Orbital Tech Badges (Left Side) -->
+  <g class="badge-f1">
+    <rect x="35" y="115" width="105" height="28" rx="6" fill="#06121d" stroke="#00d4ff" stroke-width="0.9" />
+    <circle cx="50" cy="129" r="3" fill="#00d4ff" />
+    <text x="60" y="133" class="mono" font-size="10.5" font-weight="600" fill="#e8edf2">Java • Spring</text>
+  </g>
+  <g class="badge-f2">
+    <rect x="25" y="155" width="115" height="28" rx="6" fill="#06121d" stroke="#61dafb" stroke-width="0.9" />
+    <circle cx="40" cy="169" r="3" fill="#61dafb" />
+    <text x="50" y="173" class="mono" font-size="10.5" font-weight="600" fill="#e8edf2">React 18 • MERN</text>
+  </g>
+  <g class="badge-f3">
+    <rect x="42" y="195" width="98" height="28" rx="6" fill="#06121d" stroke="#2496ed" stroke-width="0.9" />
+    <circle cx="56" cy="209" r="3" fill="#2496ed" />
+    <text x="66" y="213" class="mono" font-size="10.5" font-weight="600" fill="#e8edf2">Docker Core</text>
+  </g>
+
+  <!-- Floating Orbital Tech Badges (Right Side) -->
+  <g class="badge-f2">
+    <rect x="805" y="115" width="112" height="28" rx="6" fill="#06121d" stroke="#ff4d6d" stroke-width="0.9" />
+    <circle cx="820" cy="129" r="3" fill="#ff4d6d" />
+    <text x="830" y="133" class="mono" font-size="10.5" font-weight="600" fill="#e8edf2">ESP8266 • IoT</text>
+  </g>
+  <g class="badge-f1">
+    <rect x="815" y="155" width="102" height="28" rx="6" fill="#06121d" stroke="#02569b" stroke-width="0.9" />
+    <circle cx="830" cy="169" r="3" fill="#02569b" />
+    <text x="840" y="173" class="mono" font-size="10.5" font-weight="600" fill="#e8edf2">Flutter • Dart</text>
+  </g>
+  <g class="badge-f3">
+    <rect x="800" y="195" width="118" height="28" rx="6" fill="#06121d" stroke="#00ff9d" stroke-width="0.9" />
+    <circle cx="814" cy="209" r="3" fill="#00ff9d" />
+    <text x="824" y="213" class="mono" font-size="10.5" font-weight="600" fill="#e8edf2">Arduino • C++</text>
+  </g>
+
+  <!-- CENTER DISPLAY: Availability Pill -->
+  <g transform="translate(475, 48)">
+    <rect x="-175" y="-13" width="350" height="26" rx="13" fill="#061822" stroke="#00d4ff" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="-150" cy="0" r="4.5" fill="#00ff9d" class="live-beacon" />
+    <text x="10" y="4" text-anchor="middle" class="mono" font-size="10" font-weight="bold" fill="#00ff9d" letter-spacing="1.2">
+      STATUS: ACTIVE • OPEN FOR INTERNSHIPS &amp; JUNIOR ROLES
     </text>
   </g>
 
-  <!-- Main Hero Title -->
-  <text x="475" y="112" text-anchor="middle" class="font-display" font-size="52" font-weight="800" letter-spacing="-1.5" fill="url(#title-grad)" filter="url(#cyan-glow)">
+  <!-- CENTER DISPLAY: Grand Cyber Title -->
+  <text x="475" y="116" text-anchor="middle" class="syne" font-size="54" font-weight="800" letter-spacing="-1.5" fill="url(#neon-cyan)" filter="url(#neon-glow)">
     MESANDA SETHUMIKA
   </text>
 
-  <!-- Tagline Subtitle -->
-  <text x="475" y="146" text-anchor="middle" class="font-mono" font-size="14.5" font-weight="500" fill="#88a8be" letter-spacing="1.5">
-    ⚡ SOFTWARE ENGINEER <tspan fill="#00d4ff">|</tspan> FULL-STACK WEB <tspan fill="#00ff9d">&amp;</tspan> ROBOTICS ARTIFICER
-  </text>
-
-  <!-- Interactive Terminal Text Cycler (Center Pill) -->
-  <g transform="translate(475, 186)">
-    <rect x="-270" y="-14" width="540" height="28" rx="6" fill="#050d14" stroke="#1c2d3d" stroke-width="1" />
-    <circle cx="-252" cy="0" r="3" fill="#ff5f56" />
-    <circle cx="-242" cy="0" r="3" fill="#ffbd2e" />
-    <circle cx="-232" cy="0" r="3" fill="#27c93f" />
-
-    <!-- Text 1 -->
-    <g class="txt-1">
-      <text x="8" y="4" text-anchor="middle" class="font-mono" font-size="11.5" fill="#e8edf2">
-        <tspan fill="#00d4ff">&gt;</tspan> Java 17 &amp; Spring Boot 3 • MERN Stack • React 18 • Docker
-      </text>
-    </g>
-
-    <!-- Text 2 -->
-    <g class="txt-2">
-      <text x="8" y="4" text-anchor="middle" class="font-mono" font-size="11.5" fill="#e8edf2">
-        <tspan fill="#00ff9d">&gt;</tspan> ESP8266 WiFi IoT • Embedded C++ • Flutter &amp; Riverpod
-      </text>
-    </g>
-
-    <!-- Text 3 -->
-    <g class="txt-3">
-      <text x="8" y="4" text-anchor="middle" class="font-mono" font-size="11.5" fill="#e8edf2">
-        <tspan fill="#ffbe0b">&gt;</tspan> Building Real-World Systems in Panadura, Sri Lanka 🇱🇰
-      </text>
-    </g>
-
-    <text x="252" y="4" class="font-mono cursor" font-size="13" fill="#00d4ff">█</text>
+  <!-- Tagline Pill -->
+  <g transform="translate(475, 148)">
+    <rect x="-240" y="-12" width="480" height="24" rx="12" fill="#030b12" stroke="#1c2d3d" stroke-width="0.8" />
+    <text x="0" y="4" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#a4c2d6" letter-spacing="1.5">
+      ⚡ SOFTWARE ENGINEER <tspan fill="#00d4ff">|</tspan> FULL-STACK WEB <tspan fill="#00ff9d">&amp;</tspan> ROBOTICS ARTIFICER
+    </text>
   </g>
 
-  <!-- Fluid Cyber Waving Bottom Border -->
-  <path class="wave-anim" d="M 0 252 C 160 270, 320 236, 480 255 C 640 272, 800 240, 950 258 L 950 280 L 0 280 Z" fill="url(#wave-grad)" opacity="0.9" />
-  <path d="M 0 262 C 200 248, 440 272, 680 254 C 820 244, 900 264, 950 260 L 950 280 L 0 280 Z" fill="#020608" opacity="0.6" />
+  <!-- Interactive Terminal Cycler Window -->
+  <g transform="translate(475, 204)">
+    <rect x="-310" y="-18" width="620" height="36" rx="8" fill="#03080e" stroke="#00d4ff" stroke-width="0.9" stroke-opacity="0.4" filter="url(#neon-glow)" />
+    <!-- Mac Terminal Dots -->
+    <circle cx="-290" cy="0" r="3.5" fill="#ff5f56" />
+    <circle cx="-278" cy="0" r="3.5" fill="#ffbd2e" />
+    <circle cx="-266" cy="0" r="3.5" fill="#27c93f" />
+
+    <!-- Terminal Command 1 -->
+    <g class="cmd-1">
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="11.5" fill="#e8edf2">
+        <tspan fill="#00d4ff">mesanda@core:~$</tspan> deploy --stack="Java 17, Spring Boot 3, MERN, Docker" <tspan fill="#00ff9d">[PASS]</tspan>
+      </text>
+    </g>
+
+    <!-- Terminal Command 2 -->
+    <g class="cmd-2">
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="11.5" fill="#e8edf2">
+        <tspan fill="#00ff9d">mesanda@core:~$</tspan> flash --target=ESP8266 --mode=AsyncWiFiRelay <tspan fill="#ffbe0b">[ONLINE]</tspan>
+      </text>
+    </g>
+
+    <!-- Terminal Command 3 -->
+    <g class="cmd-3">
+      <text x="0" y="5" text-anchor="middle" class="mono" font-size="11.5" fill="#e8edf2">
+        <tspan fill="#7b5ea7">mesanda@core:~$</tspan> location --query=Panadura,_Sri_Lanka 🇱🇰 <tspan fill="#00d4ff">[READY TO SHIP]</tspan>
+      </text>
+    </g>
+
+    <text x="290" y="5" class="mono cursor-bar" font-size="14" fill="#00d4ff">█</text>
+  </g>
+
+  <!-- Fluid Flowing Bottom Waves -->
+  <path class="wave-motion" d="M 0 290 C 180 315, 360 268, 540 295 C 720 320, 850 270, 950 295 L 950 320 L 0 320 Z" fill="url(#fluid-wave)" opacity="0.95" />
+  <path d="M 0 300 C 220 280, 480 315, 720 292 C 840 280, 900 305, 950 300 L 950 320 L 0 320 Z" fill="#010408" opacity="0.6" />
 </svg>
