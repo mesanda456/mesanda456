@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 130" width="100%" height="130">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020608"/>
+      <stop offset="50%" stop-color="#0b1015"/>
+      <stop offset="100%" stop-color="#05141c"/>
+    </linearGradient>
+    
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="50%" stop-color="#7b5ea7"/>
+      <stop offset="100%" stop-color="#00ff9d"/>
+    </linearGradient>
+
+    <linearGradient id="eq-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="50%" stop-color="#7b5ea7"/>
+      <stop offset="100%" stop-color="#00ff9d"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @keyframes pulse-ring {
+        0% { transform: scale(0.6); opacity: 1; }
+        100% { transform: scale(1.6); opacity: 0; }
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #00ff9d); }
+        50% { opacity: 0.3; filter: none; }
+      }
+      @keyframes eq-bounce-1 { 0%, 100% { height: 12px; y: 70px; } 50% { height: 42px; y: 40px; } }
+      @keyframes eq-bounce-2 { 0%, 100% { height: 38px; y: 44px; } 50% { height: 16px; y: 66px; } }
+      @keyframes eq-bounce-3 { 0%, 100% { height: 22px; y: 60px; } 50% { height: 48px; y: 34px; } }
+      @keyframes eq-bounce-4 { 0%, 100% { height: 44px; y: 38px; } 50% { height: 18px; y: 64px; } }
+      @keyframes eq-bounce-5 { 0%, 100% { height: 18px; y: 64px; } 50% { height: 40px; y: 42px; } }
+      @keyframes eq-bounce-6 { 0%, 100% { height: 35px; y: 47px; } 50% { height: 20px; y: 62px; } }
+      @keyframes scanline {
+        0% { transform: translateY(-130px); }
+        100% { transform: translateY(130px); }
+      }
+      
+      .radar-wave {
+        transform-origin: 50px 65px;
+        animation: pulse-ring 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      }
+      .dot-live { animation: blink 1.5s infinite; }
+      .bar-1 { animation: eq-bounce-1 1.1s ease-in-out infinite; }
+      .bar-2 { animation: eq-bounce-2 0.9s ease-in-out infinite 0.2s; }
+      .bar-3 { animation: eq-bounce-3 1.3s ease-in-out infinite 0.4s; }
+      .bar-4 { animation: eq-bounce-4 0.8s ease-in-out infinite 0.1s; }
+      .bar-5 { animation: eq-bounce-5 1.2s ease-in-out infinite 0.5s; }
+      .bar-6 { animation: eq-bounce-6 1.0s ease-in-out infinite 0.3s; }
+      
+      .hud-title { font-family: 'Courier New', monospace, 'DM Mono'; font-size: 11px; fill: #00d4ff; letter-spacing: 2px; font-weight: bold; }
+      .hud-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; fill: #e8edf2; }
+      .hud-sub { font-family: 'Courier New', monospace, 'DM Mono'; font-size: 11px; fill: #6b7f8e; }
+    </style>
+  </defs>
+
+  <!-- Card Background -->
+  <rect x="2" y="2" width="846" height="126" rx="10" fill="url(#bg-grad)" stroke="url(#border-grad)" stroke-width="1.5"/>
+
+  <!-- Left: Animated Radar / Core -->
+  <g>
+    <circle cx="55" cy="65" r="32" fill="none" stroke="#00d4ff" stroke-width="0.8" opacity="0.25"/>
+    <circle cx="55" cy="65" r="22" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+    <circle cx="55" cy="65" r="18" fill="none" stroke="#00ff9d" stroke-width="1" class="radar-wave"/>
+    <circle cx="55" cy="65" r="18" fill="none" stroke="#00d4ff" stroke-width="1" class="radar-wave" style="animation-delay: 1.2s;"/>
+    <circle cx="55" cy="65" r="6" fill="#00ff9d" class="dot-live"/>
+    <circle cx="55" cy="65" r="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Center: System Diagnostics -->
+  <g transform="translate(110, 0)">
+    <!-- Header -->
+    <text x="0" y="32" class="hud-title">◈ MESANDA OS v2.6 // TELEMETRY &amp; HARDWARE MATRIX</text>
+    <line x1="0" y1="40" x2="560" y2="40" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+    <!-- Left Column Items -->
+    <g transform="translate(0, 60)">
+      <circle cx="4" cy="-4" r="3" fill="#00ff9d" class="dot-live"/>
+      <text x="14" y="0" class="hud-text" font-weight="600">Runtime: <tspan fill="#00ff9d">Full-Stack &amp; Robotics Mode</tspan></text>
+      <text x="14" y="18" class="hud-sub">Panadura, Sri Lanka (UTC+05:30) • 100% Ceylon Tea Powered</text>
+      <text x="14" y="36" class="hud-sub">Active Node: Spring Boot 3 • MERN • Flutter • ESP8266 IoT</text>
+    </g>
+
+    <!-- Right Column Metrics Chips -->
+    <g transform="translate(380, 52)">
+      <rect x="0" y="0" width="180" height="24" rx="4" fill="#111a22" stroke="#00d4ff" stroke-opacity="0.3"/>
+      <text x="10" y="16" class="hud-sub">STATUS: <tspan fill="#00ff9d" font-weight="bold">AVAILABLE FOR HIRE</tspan></text>
+      
+      <rect x="0" y="30" width="180" height="24" rx="4" fill="#111a22" stroke="#7b5ea7" stroke-opacity="0.3"/>
+      <text x="10" y="46" class="hud-sub">STREAK: <tspan fill="#00d4ff" font-weight="bold">ACTIVE &amp; BURNING 🔥</tspan></text>
+    </g>
+  </g>
+
+  <!-- Right: Dynamic Audio / Frequency Equalizer -->
+  <g transform="translate(710, 20)">
+    <rect class="bar-1" x="0"  y="60" width="6" height="22" rx="3" fill="url(#eq-grad)" />
+    <rect class="bar-2" x="12" y="44" width="6" height="38" rx="3" fill="url(#eq-grad)" />
+    <rect class="bar-3" x="24" y="34" width="6" height="48" rx="3" fill="url(#eq-grad)" />
+    <rect class="bar-4" x="36" y="38" width="6" height="44" rx="3" fill="url(#eq-grad)" />
+    <rect class="bar-5" x="48" y="42" width="6" height="40" rx="3" fill="url(#eq-grad)" />
+    <rect class="bar-6" x="60" y="47" width="6" height="35" rx="3" fill="url(#eq-grad)" />
+    <rect class="bar-2" x="72" y="55" width="6" height="27" rx="3" fill="url(#eq-grad)" />
+    <rect class="bar-1" x="84" y="66" width="6" height="16" rx="3" fill="url(#eq-grad)" />
+    <text x="45" y="100" text-anchor="middle" class="hud-sub" font-size="9" fill="#00d4ff">LIVE FREQ</text>
+  </g>
+</svg>

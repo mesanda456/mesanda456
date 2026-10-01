@@ -11,17 +11,52 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=19&pause=1200&color=00D4FF&center=true&vCenter=true&width=700&lines=Software+Engineering+Undergraduate;Full-Stack+Web+%26+Robotics+Developer;Java+%26+Spring+Boot+Engineer+%7C+MERN+Stack+Developer;Building+Real-World+Systems+in+Panadura%2C+Sri+Lanka;Open+for+Internships+%26+Junior+Developer+Roles" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=19&pause=1200&color=00D4FF&center=true&vCenter=true&width=720&lines=Software+Engineering+Undergraduate;Full-Stack+Web+%26+Robotics+Developer;Java+%26+Spring+Boot+Engineer+%7C+MERN+Stack;Wiring+up+ESP8266+boards+for+fun;Building+Real-World+Systems+in+Panadura%2C+Sri+Lanka;Open+for+Internships+%26+Junior+Developer+Roles" alt="Typing SVG" />
 
 </div>
 
 <br/>
 
-## 👨‍💻 About Me
+<!-- ANIMATED HUD TELEMETRY MATRIX -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/cyber-status.svg" width="100%" alt="Cyber Status Telemetry HUD" />
+</div>
 
-> *"I'm a motivated Software Engineering undergraduate with a passion for building things that work in the real world — not just in demos."*
+<br/>
 
-My focus spans **full-stack web development** with **Java & Spring Boot** and the **MERN stack** on the backend, **React** on the frontend, and **embedded systems and robotics** using **Arduino & ESP8266**. I thrive on solving complex, meaningful problems and I'm actively seeking internship and junior developer opportunities where I can contribute, grow, and ship real products.
+<!-- ABOUT & ANIMATED DEV DESK -->
+<table>
+<tr>
+<td width="55%" valign="top">
+
+### ⚡ `whoami.sh` — The Real Story
+
+```zsh
+$ cat << 'EOF' > /dev/mesanda.status
+[DEVELOPER] Mesanda Sethumika
+[LOCATION]  Panadura, Sri Lanka 🇱🇰 (UTC+05:30)
+[ROLE]      Software Engineering Undergraduate
+[STACKS]    Full-Stack (Spring Boot 3 + MERN) • Mobile (Flutter) • IoT (ESP8266)
+[MISSION]   Building things that work in the real world — not just in demos
+[OPEN TO]   Internships & Junior Developer Roles (Full-Stack / Java)
+EOF
+
+$ uptime
+up 24/7, daily commit streak alive, fueled by 100% Ceylon Tea ☕
+```
+
+> *"I thrive on solving complex, meaningful problems. Whether it's coordinating real-time floor plans with React & Node, containerizing Spring Boot microservices with Docker, or soldering relays for ESP8266 WiFi microcontrollers — I build to ship."*
+
+</td>
+<td width="45%" align="center" valign="middle">
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%" alt="Developer coding animation" />
+
+<sub><i>Crafting clean architecture & soldering late into the night 🌙</i></sub>
+
+</td>
+</tr>
+</table>
 
 <br/>
 
@@ -37,7 +72,7 @@ My focus spans **full-stack web development** with **Java & Spring Boot** and th
     </td>
     <td width="25%">
       <h3>🌐 2 Domains</h3>
-      <p><b>Web Apps + Robotics</b></p>
+      <p><b>Web Platforms + Robotics</b></p>
     </td>
     <td width="25%">
       <h3>♾️ Hunger</h3>
@@ -48,29 +83,9 @@ My focus spans **full-stack web development** with **Java & Spring Boot** and th
 
 <br/>
 
-```yaml
-# mesanda.config.yml — Current Runtime Status
-developer:
-  name: "Mesanda Sethumika"
-  role: "Software Engineering Undergraduate"
-  location: "Panadura, Sri Lanka 🇱🇰"
-  status: "🟢 Available for Opportunities"
-  open_to:
-    - "Software Engineering Internships"
-    - "Junior Full-Stack / Backend Developer Roles"
-    - "Java / Spring Boot Engineering"
-    - "Open Source Collaborations"
-  focus_areas:
-    primary: ["Spring Boot 3", "MERN Stack", "React 18", "Docker"]
-    hardware_iot: ["ESP8266", "Arduino", "Embedded C"]
-    mobile: ["Flutter", "Dart", "Riverpod", "Hive"]
-```
-
-<br/>
-
 ---
 
-## 🧰 Tech Arsenal
+## 🧰 Tech Arsenal & Forge
 
 <div align="center">
 
@@ -95,40 +110,53 @@ developer:
 
 ---
 
-## 🏆 Featured Projects
+## 🏆 Featured Projects & Deep Dives
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
 ### 🎪 [EventPulse](https://github.com/mesanda456)
-<img src="https://img.shields.io/badge/Status-In_Progress-ffc107?style=flat-square"/> <img src="https://img.shields.io/badge/Stack-MERN-00ff9d?style=flat-square&logo=react"/>
+<img src="https://img.shields.io/badge/Status-In_Progress-ffc107?style=flat-square"/> <img src="https://img.shields.io/badge/Team-7_Dev_Agile_Squad-00d4ff?style=flat-square&logo=jira"/> <img src="https://img.shields.io/badge/Stack-MERN-00ff9d?style=flat-square&logo=react"/>
 
 A full-stack MERN event management platform with interactive floor-plan mapping — built as a team Agile coursework project.
 
 * **Interactive Floor Plan**: Map search, category filtering & zone dimming.
-* **Role-Based Architecture**: Business profile management & authenticated routing.
-* **Stall Modals**: Smooth auto-pan, pin animations & real-time booking.
+* **Role-Based Routing**: Business profile management & authenticated navigation.
+* **Stall Detail Modals**: Smooth auto-pan, pin animations & real-time booking.
+
+<details>
+<summary><b>🔍 View Agile Architecture</b></summary>
 
 ```
-MongoDB • Express • React • Node.js • Agile/Jira
+[React 18 Frontend] ──REST──> [Node/Express Gateway]
+        │                             │
+   Interactive                   MongoDB Atlas
+ Floorplan Canvas             (Collections & Auth)
 ```
+</details>
 
 </td>
 <td width="50%" valign="top">
 
 ### 🏥 [MediConnect](https://github.com/mesanda456)
-<img src="https://img.shields.io/badge/Status-Deployed-00d4ff?style=flat-square"/> <img src="https://img.shields.io/badge/Stack-Spring_Boot_3_%2B_React-6DB33F?style=flat-square&logo=springboot"/>
+<img src="https://img.shields.io/badge/Status-Deployed-00ff9d?style=flat-square"/> <img src="https://img.shields.io/badge/AI-Google_Gemini-blueviolet?style=flat-square&logo=google"/> <img src="https://img.shields.io/badge/Stack-Spring_Boot_3-6DB33F?style=flat-square&logo=springboot"/>
 
 A full-stack hospital management system covering patients, doctors, appointments, and medical records end-to-end.
 
-* **Live Token Queue**: Recharts dashboards, queue dispatch & bell alerts.
+* **Live Token Queue**: Recharts dashboards, automated token dispatch & bell alerts.
 * **AI Symptom Analyzer**: Google Gemini-powered preliminary triage engine.
 * **Orchestration**: Fully containerized with Docker Compose; deployed on Vercel.
 
+<details>
+<summary><b>🔍 View AI Triage Pipeline</b></summary>
+
 ```
-React 18 • Spring Boot 3 • Java 17 • MySQL • Docker
+Patient Symptoms ──> [Spring Boot 3 REST] ──> [Gemini 2.0 API]
+                             │
+                  [MySQL Database] + PDF Report Generator
 ```
+</details>
 
 </td>
 </tr>
@@ -136,23 +164,28 @@ React 18 • Spring Boot 3 • Java 17 • MySQL • Docker
 <td width="50%" valign="top">
 
 ### 🃏 [lingua-flip](https://github.com/mesanda456)
-<img src="https://img.shields.io/badge/Status-Building-ffc107?style=flat-square"/> <img src="https://img.shields.io/badge/Stack-Flutter_%26_Dart-02569B?style=flat-square&logo=flutter"/>
+<img src="https://img.shields.io/badge/Status-Building-ffc107?style=flat-square"/> <img src="https://img.shields.io/badge/Algorithm-SuperMemo_SM--2-yellow?style=flat-square"/> <img src="https://img.shields.io/badge/Stack-Flutter-02569B?style=flat-square&logo=flutter"/>
 
 A cross-platform language flashcard app built with Flutter, following a structured six-week development roadmap.
 
-* **Cognitive Spaced Repetition**: Memory retention schedule right before decay.
+* **Spaced Repetition**: SM-2 algorithm calculates retention intervals.
 * **Local Persistence**: Instant zero-latency offline storage via Hive NoSQL.
-* **State & Metrics**: Clean architecture with Riverpod & `fl_chart` analytics.
+* **Telemetry**: Clean architecture with Riverpod state & `fl_chart` analytics.
+
+<details>
+<summary><b>🔍 View Spaced Repetition Formula</b></summary>
 
 ```
-Flutter • Dart • Hive • Riverpod • fl_chart
+EF' = EF + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02))
+Interval = I(n-1) * EF
 ```
+</details>
 
 </td>
 <td width="50%" valign="top">
 
 ### 🪔 [Vesak Light Controller](https://github.com/mesanda456)
-<img src="https://img.shields.io/badge/Status-Completed-00ff9d?style=flat-square"/> <img src="https://img.shields.io/badge/Stack-ESP8266_IoT-E7352C?style=flat-square&logo=espressif"/>
+<img src="https://img.shields.io/badge/Status-Completed-00ff9d?style=flat-square"/> <img src="https://img.shields.io/badge/Chip-ESP8266_NodeMCU-red?style=flat-square&logo=espressif"/> <img src="https://img.shields.io/badge/Stack-Embedded_C++-00599C?style=flat-square"/>
 
 An ESP8266-based smart lighting controller built for traditional Vesak lantern decorations, controllable over WiFi from any phone.
 
@@ -160,13 +193,27 @@ An ESP8266-based smart lighting controller built for traditional Vesak lantern d
 * **Embedded Web Server**: Custom mobile web UI hosted directly on the microcontroller.
 * **Zero App Install**: Real-time pattern toggling directly from any mobile browser.
 
+<details>
+<summary><b>🔍 View Hardware Pinout</b></summary>
+
 ```
-ESP8266 • Arduino • Embedded C • Relays & WiFi
+GPIO 14 (D5) ──> Relay 1: Octagon Outer Rim
+GPIO 12 (D6) ──> Relay 2: Central Heart Light
+GPIO 13 (D7) ──> Relay 3: Hanging Tassels
+GPIO 15 (D8) ──> Relay 4: Ambient Halo
 ```
+</details>
 
 </td>
 </tr>
 </table>
+
+<br/>
+
+<!-- ANIMATED HARDWARE LAB SCHEMATIC -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/vesak-schematic.svg" width="100%" alt="ESP8266 Hardware Animated Schematic" />
+</div>
 
 <br/>
 
@@ -176,7 +223,7 @@ ESP8266 • Arduino • Embedded C • Relays & WiFi
 
 <div align="center">
 
-### 🎮 Nightly Contribution Journey
+### 🎮 Arcade Contribution Run
 <img src="https://raw.githubusercontent.com/mesanda456/mesanda456/output/pacman-contribution-graph-dark.svg" width="100%" alt="Mesanda's Pac-Man Contribution Graph" />
 
 <br/><br/>
@@ -199,6 +246,37 @@ ESP8266 • Arduino • Embedded C • Relays & WiFi
     </td>
   </tr>
 </table>
+
+</div>
+
+<br/>
+
+---
+
+<div align="center">
+
+### 🎧 Current Coding Vibe
+```
+♫ Now Playing: "Synthwave Nights & Clean Code Compilation"
+02:14 ━━━━━━━●──────────── 03:45
+      ⏮   ▶   ⏭   🔁   100% 🔊
+```
+
+<details>
+<summary><b>🕹️ Developer Easter Egg: What happens when you run `./deploy_friday.sh`? (Click to Run)</b></summary>
+<br/>
+
+```bash
+$ ./deploy_friday.sh --env=production --skip-tests=false
+[!] WARNING: Friday 17:00 deploy protocol detected!
+[✓] Brewing high-concentration Ceylon BOPF Tea... Done ☕
+[✓] Running 48 test suites across Spring Boot & React... 100% Passed.
+[✓] Docker images compiled & pushed to registry... 0 vulnerabilities.
+[✓] Relays safely toggled to low-power standby mode.
+[🚀] Production is healthy. Weekend successfully unlocked!
+```
+
+</details>
 
 </div>
 
