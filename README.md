@@ -1,6 +1,10 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:020608,25:0b1015,50:002b36,75:005a70,100:00d4ff&height=220&section=header&text=Mesanda%20Sethumika&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=%E2%9A%A1%20Software%20Engineer%20%7C%20Full-Stack%20Web%20%26%20Robotics%20Builder&descAlignY=58&descSize=19"/>
+<a href="https://mesanda456.github.io/mesanda-portfolio/">
+  <img width="100%" src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/hero-banner.svg" alt="Mesanda Sethumika — Software Engineer" />
+</a>
+
+<br/><br/>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live_Site-00d4ff?style=for-the-badge&logo=googlechrome&logoColor=black)](https://mesanda456.github.io/mesanda-portfolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Mesanda_Sethumika-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mesanda-sethumika-943344353)
@@ -9,17 +13,11 @@
 [![Resume](https://img.shields.io/badge/Resume-Download_CV-7b5ea7?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://mesanda456.github.io/mesanda-portfolio/mesand%20CV%201.pdf)
 [![Location](https://img.shields.io/badge/Base-Panadura,_Sri_Lanka_🇱🇰-0969da?style=for-the-badge)](https://en.wikipedia.org/wiki/Panadura)
 
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=19&pause=1200&color=00D4FF&center=true&vCenter=true&width=720&lines=Software+Engineering+Undergraduate;Full-Stack+Web+%26+Robotics+Developer;Java+%26+Spring+Boot+Engineer+%7C+MERN+Stack;Wiring+up+ESP8266+boards+for+fun;Building+Real-World+Systems+in+Panadura%2C+Sri+Lanka;Open+for+Internships+%26+Junior+Developer+Roles" alt="Typing SVG" />
-
-</div>
-
-<br/>
+<br/><br/>
 
 <!-- ANIMATED HUD TELEMETRY MATRIX -->
-<div align="center">
-  <img src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/cyber-status.svg" width="100%" alt="Cyber Status Telemetry HUD" />
+<img width="100%" src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/cyber-status.svg" alt="Cyber Status Telemetry HUD" />
+
 </div>
 
 <br/>
@@ -212,7 +210,7 @@ GPIO 15 (D8) ──> Relay 4: Ambient Halo
 
 <!-- ANIMATED HARDWARE LAB SCHEMATIC -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/vesak-schematic.svg" width="100%" alt="ESP8266 Hardware Animated Schematic" />
+  <img width="100%" src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/vesak-schematic.svg" alt="ESP8266 Hardware Animated Schematic" />
 </div>
 
 <br/>
@@ -323,6 +321,6 @@ $ ./deploy_friday.sh --env=production --skip-tests=false
 
 <br/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:020608,25:0b1015,50:002b36,75:005a70,100:00d4ff&height=120&section=footer"/>
+<img width="100%" src="https://raw.githubusercontent.com/mesanda456/mesanda456/main/assets/footer-wave.svg" alt="Footer Cyber Wave" />
 
 </div>
